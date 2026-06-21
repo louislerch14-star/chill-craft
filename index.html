@@ -2,71 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
-    <title>Chillcraft | Project Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Chillcraft | Dashboard</title>
     <style>
-        * { box-sizing: border-box; }
-        body { margin: 0; font-family: 'Inter', sans-serif; background: #050505; color: #eee; scroll-behavior: smooth; }
+        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: #080808; color: #fff; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
         
-        section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 20px; background-attachment: fixed; background-size: cover; background-position: center; }
+        /* Das Haupt-Container-Layout */
+        .wrapper { width: 90%; max-width: 1000px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         
-        /* Glassmorphism Cards */
-        .card { 
-            background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1);
-            padding: 50px; border-radius: 30px; max-width: 800px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-        
-        h1, h2 { font-weight: 600; letter-spacing: -1px; margin-bottom: 20px; }
-        h2 { color: #5bc0de; font-size: 2.5em; }
-        
-        .mod-tag { display: inline-block; background: #1a1a1a; padding: 5px 15px; border-radius: 10px; font-size: 0.9em; margin-right: 10px; border: 1px solid #333; }
-        
-        .hero { flex-direction: column; text-align: center; }
-        .arrow { font-size: 2em; animation: bounce 2s infinite; margin-top: 40px; cursor: pointer; color: #5bc0de; }
-        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-20px);} }
+        .header { grid-column: 1 / span 2; text-align: center; margin-bottom: 20px; }
+        h1 { font-size: 3em; letter-spacing: -2px; margin: 0; color: #5bc0de; }
 
-        #tech { background-image: url('tech_bg.jpg'); }
-        #cozy { background-image: url('cozy_bg.jpg'); }
-        #magic { background-image: url('magic_bg.jpg'); }
+        /* Karten-Style */
+        .card { 
+            background: rgba(20, 20, 20, 0.8); border: 1px solid #333; padding: 30px; border-radius: 20px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover { border-color: #5bc0de; transform: translateY(-5px); }
+        
+        h2 { margin-top: 0; color: #fff; }
+        .tag-container { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: #000; padding: 5px 12px; border-radius: 6px; font-size: 0.8em; color: #aaa; border: 1px solid #222; }
     </style>
 </head>
 <body>
 
-    <section class="hero">
+<div class="wrapper">
+    <div class="header">
         <h1>CHILLCRAFT</h1>
-        <p>A curated experience for those who value detail and relaxation.</p>
-        <div class="arrow" onclick="document.getElementById('tech').scrollIntoView()">↓</div>
-    </section>
+        <p>Your Ultimate Modded Experience</p>
+    </div>
 
-    <section id="tech">
-        <div class="card">
-            <h2>Industrial Automation</h2>
-            <p>Master the machines. From complex production lines to automated logistics, we bring the peak of technical progression to your base.</p>
-            <div style="margin-top: 20px;">
-                <span class="mod-tag">Create</span> <span class="mod-tag">Mekanism</span> <span class="mod-tag">Refined Storage</span>
-            </div>
+    <!-- Tech Section -->
+    <div class="card">
+        <h2>Industrial Automation</h2>
+        <p>Master the machines. From complex production lines to automated logistics.</p>
+        <div class="tag-container">
+            <span class="tag">Create</span> <span class="tag">Mekanism</span>
         </div>
-    </section>
+    </div>
 
-    <section id="cozy">
-        <div class="card">
-            <h2>Cozy Living</h2>
-            <p>Design your retreat. With focus on aesthetics and comfort, we provide the tools to build a home you'll never want to leave.</p>
-            <div style="margin-top: 20px;">
-                <span class="mod-tag">Refurbished Furniture</span> <span class="mod-tag">Farmer’s Delight</span>
-            </div>
+    <!-- Cozy Section -->
+    <div class="card">
+        <h2>Cozy Living</h2>
+        <p>Build your retreat. Focus on aesthetics, comfort, and culinary arts.</p>
+        <div class="tag-container">
+            <span class="tag">Furniture</span> <span class="tag">Farming</span>
         </div>
-    </section>
+    </div>
 
-    <section id="magic">
-        <div class="card">
-            <h2>Arcane Wonders</h2>
-            <p>Unravel the unknown. Explore unique spell systems and magical artifacts that add a layer of mystery to your journey.</p>
-            <div style="margin-top: 20px;">
-                <span class="mod-tag">Irons Spells</span> <span class="mod-tag">Mahou Tsukai</span> <span class="mod-tag">Hexerei</span>
-            </div>
+    <!-- Magic Section -->
+    <div class="card">
+        <h2>Arcane Wonders</h2>
+        <p>Unravel the unknown. Explore unique spell systems and magical artifacts.</p>
+        <div class="tag-container">
+            <span class="tag">Magic</span> <span class="tag">Exploration</span>
         </div>
-    </section>
+    </div>
+
+    <!-- Community Card -->
+    <div class="card">
+        <h2>Join Community</h2>
+        <p>Connect with players, share your builds, and get the latest updates.</p>
+        <a href="#" style="color: #5bc0de; text-decoration: none; font-weight: bold;">Discord Server →</a>
+    </div>
+</div>
 
 </body>
 </html>
