@@ -2,71 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="chillcraft.png">
     <title>Chillcraft | Dashboard</title>
     <style>
-        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: #080808; color: #fff; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        
-        /* Das Haupt-Container-Layout */
-        .wrapper { width: 90%; max-width: 1000px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        
-        .header { grid-column: 1 / span 2; text-align: center; margin-bottom: 20px; }
-        h1 { font-size: 3em; letter-spacing: -2px; margin: 0; color: #5bc0de; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: #000; color: white; }
 
-        /* Karten-Style */
-        .card { 
-            background: rgba(20, 20, 20, 0.8); border: 1px solid #333; padding: 30px; border-radius: 20px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+        /* Bereich-Stil */
+        section { 
+            min-height: 100vh; display: flex; align-items: center; justify-content: center; 
+            background-size: cover; background-position: center; background-attachment: fixed;
+            position: relative;
         }
-        .card:hover { border-color: #5bc0de; transform: translateY(-5px); }
+
+        /* Der Grauschleier-Effekt für alle Sektionen */
+        section::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Hier kannst du die Transparenz anpassen */
+        }
+
+        .content { position: relative; z-index: 1; text-align: center; max-width: 800px; padding: 40px; }
         
-        h2 { margin-top: 0; color: #fff; }
-        .tag-container { display: flex; gap: 10px; margin-top: 15px; }
-        .tag { background: #000; padding: 5px 12px; border-radius: 6px; font-size: 0.8em; color: #aaa; border: 1px solid #222; }
+        h1, h2 { font-weight: 700; text-transform: uppercase; color: #fff; }
+        h1 { font-size: 4em; }
+        h2 { color: #5bc0de; }
+
+        /* Spezifische Hintergründe */
+        #welcome { background-image: url('chillcraft.png'); }
+        #tech { background-image: url('tech.png'); }
+        #magic { background-image: url('magic.png'); }
     </style>
 </head>
 <body>
 
-<div class="wrapper">
-    <div class="header">
-        <h1>CHILLCRAFT</h1>
-        <p>Your Ultimate Modded Experience</p>
-    </div>
-
-    <!-- Tech Section -->
-    <div class="card">
-        <h2>Industrial Automation</h2>
-        <p>Master the machines. From complex production lines to automated logistics.</p>
-        <div class="tag-container">
-            <span class="tag">Create</span> <span class="tag">Mekanism</span>
+    <!-- Welcome -->
+    <section id="welcome">
+        <div class="content">
+            <h1>CHILLCRAFT</h1>
+            <p>Your curated experience for automation, magic, and relaxation.</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Cozy Section -->
-    <div class="card">
-        <h2>Cozy Living</h2>
-        <p>Build your retreat. Focus on aesthetics, comfort, and culinary arts.</p>
-        <div class="tag-container">
-            <span class="tag">Furniture</span> <span class="tag">Farming</span>
+    <!-- Tech -->
+    <section id="tech">
+        <div class="content">
+            <h2>Industrial Automation</h2>
+            <p>Master the machines. From complex production lines to automated logistics.</p>
+            <p><strong>Mods:</strong> Create, Mekanism, Refined Storage</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Magic Section -->
-    <div class="card">
-        <h2>Arcane Wonders</h2>
-        <p>Unravel the unknown. Explore unique spell systems and magical artifacts.</p>
-        <div class="tag-container">
-            <span class="tag">Magic</span> <span class="tag">Exploration</span>
+    <!-- Magic -->
+    <section id="magic">
+        <div class="content">
+            <h2>Arcane Wonders</h2>
+            <p>Unravel the unknown. Explore unique spell systems and magical artifacts.</p>
+            <p><strong>Mods:</strong> Irons Spells, Mahou Tsukai, Hexerei</p>
         </div>
-    </div>
-
-    <!-- Community Card -->
-    <div class="card">
-        <h2>Join Community</h2>
-        <p>Connect with players, share your builds, and get the latest updates.</p>
-        <a href="#" style="color: #5bc0de; text-decoration: none; font-weight: bold;">Discord Server →</a>
-    </div>
-</div>
+    </section>
 
 </body>
 </html>
