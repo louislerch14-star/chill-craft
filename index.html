@@ -4,44 +4,59 @@
     <meta charset="UTF-8">
     <title>Chillcraft | Portal</title>
     <style>
-        body { margin: 0; font-family: 'Segoe UI', sans-serif; color: white; scroll-behavior: smooth; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; color: white; scroll-behavior: smooth; background: #000; }
         
-        /* Sections for the scrolling experience */
-        section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 50px; background-attachment: fixed; background-size: cover; background-position: center; }
+        section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 50px; background-attachment: fixed; background-size: cover; background-position: center; text-align: center; }
         
-        .widget { background: rgba(0,0,0,0.6); padding: 40px; border-radius: 25px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.2); max-width: 600px; }
+        .widget { background: rgba(0,0,0,0.6); padding: 40px; border-radius: 25px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.2); max-width: 700px; }
         
-        /* Backgrounds for each category */
+        /* Hero Section */
+        .hero { flex-direction: column; }
+        .arrow { font-size: 2em; animation: bounce 2s infinite; margin-top: 20px; cursor: pointer; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-20px);} 60% {transform: translateY(-10px);} }
+        
+        /* Categories */
         #tech { background-image: url('tech_bg.jpg'); }
         #cozy { background-image: url('cozy_bg.jpg'); }
         #magic { background-image: url('magic_bg.jpg'); }
         
-        h2 { color: #5bc0de; font-size: 2em; margin-top: 0; }
+        h2 { color: #5bc0de; font-size: 2.5em; text-transform: uppercase; }
+        .mod-list { font-style: italic; color: #a0d8ef; margin-top: 15px; }
     </style>
 </head>
 <body>
 
-    <!-- Tech Section -->
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Welcome to Chillcraft</h1>
+        <p>Your journey into a world of automation, magic, and relaxation begins here.</p>
+        <div class="arrow" onclick="document.getElementById('tech').scrollIntoView()">↓</div>
+    </section>
+
+    <!-- Tech -->
     <section id="tech">
         <div class="widget">
             <h2>Industrial Automation</h2>
-            <p>Chillcraft is built for progress. With <strong>Create</strong>, <strong>Create Aeronautics</strong>, and <strong>Mekanism</strong>, you can build everything from complex automated factories to massive flying airships. Engineering, simplified and refined.</p>
+            <p>Build the factory of your dreams and master the skies with advanced engineering. Whether it is massive production lines or flying airships, we give you the tools to shape the world.</p>
+            <p class="mod-list">Featured mods: Create, Create Aeronautics, Mekanism, Refined Storage</p>
         </div>
     </section>
 
-    <!-- Cozy Section -->
+    <!-- Cozy -->
     <section id="cozy">
         <div class="widget">
             <h2>Cozy Living</h2>
-            <p>After a long day at the factory, it is time to unwind. Use <strong>Refurbished Furniture</strong> and <strong>Farmer’s Delight</strong> to design your perfect home, cook delicious meals, and make your base feel truly lived-in.</p>
+            <p>Take a break from the grind. Immerse yourself in a beautifully decorated home, experiment with culinary arts, and enjoy the peaceful atmosphere of your custom-built base.</p>
+            <p class="mod-list">Featured mods: Refurbished Furniture, Farmer’s Delight, Biomes O' Plenty</p>
         </div>
     </section>
 
-    <!-- Magic Section -->
+    <!-- Magic -->
     <section id="magic">
         <div class="widget">
             <h2>Arcane Wonders</h2>
-            <p>Discover the mysteries hidden within Chillcraft. Dive into <strong>Irons Spells 'n Spellbooks</strong> or harness the power of <strong>Mahou Tsukai</strong> to reshape the world with your own arcane abilities.</p>
+            <p>Unlock hidden powers and explore the mystic side of Chillcraft. Channel ancient energies, cast powerful spells, and discover secrets scattered across the land.</p>
+            <p class="mod-list">Featured mods: Irons Spells 'n Spellbooks, Mahou Tsukai, Hexerei</p>
         </div>
     </section>
 
