@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="chillcraft.png">
-    <title>Chillcraft | Dashboard</title>
+    <title>Chillcraft | Project Overview</title>
     <style>
-        body { margin: 0; font-family: 'Inter', sans-serif; background: #000; color: white; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: #080808; color: #fff; }
 
-        /* Bereich-Stil */
         section { 
-            min-height: 100vh; display: flex; align-items: center; justify-content: center; 
+            min-height: 100vh; display: flex; align-items: center; 
             background-size: cover; background-position: center; background-attachment: fixed;
-            position: relative;
+            position: relative; padding: 0 10%; /* Mehr Platz für den Inhalt */
         }
 
-        /* Der Grauschleier-Effekt für alle Sektionen */
+        /* Overlay für den Kontrast */
         section::before {
             content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Hier kannst du die Transparenz anpassen */
+            background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%);
         }
 
-        .content { position: relative; z-index: 1; text-align: center; max-width: 800px; padding: 40px; }
+        .content { position: relative; z-index: 1; max-width: 600px; }
         
-        h1, h2 { font-weight: 700; text-transform: uppercase; color: #fff; }
-        h1 { font-size: 4em; }
-        h2 { color: #5bc0de; }
+        h1 { font-size: 5em; margin: 0; color: #5bc0de; text-transform: uppercase; }
+        h2 { font-size: 3em; margin-bottom: 20px; border-left: 5px solid #5bc0de; padding-left: 20px; }
+        
+        p { font-size: 1.2em; line-height: 1.6; color: #ddd; }
+        .mod-box { 
+            background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; 
+            margin-top: 20px; border: 1px solid rgba(255,255,255,0.2); 
+        }
 
-        /* Spezifische Hintergründe */
         #welcome { background-image: url('chillcraft.png'); }
         #tech { background-image: url('tech.png'); }
         #magic { background-image: url('magic.png'); }
@@ -34,29 +37,32 @@
 </head>
 <body>
 
-    <!-- Welcome -->
     <section id="welcome">
         <div class="content">
             <h1>CHILLCRAFT</h1>
-            <p>Your curated experience for automation, magic, and relaxation.</p>
+            <p>Welcome to a world where technical innovation meets cozy atmosphere. Built for creators, engineers, and adventurers.</p>
         </div>
     </section>
 
-    <!-- Tech -->
     <section id="tech">
         <div class="content">
             <h2>Industrial Automation</h2>
-            <p>Master the machines. From complex production lines to automated logistics.</p>
-            <p><strong>Mods:</strong> Create, Mekanism, Refined Storage</p>
+            <p>Don't just build, automate. From massive power grids to automated logistics, we bring depth to your technical journey.</p>
+            <div class="mod-box">
+                <strong>Featured Tech:</strong><br>
+                Create, Create Aeronautics, Mekanism, Refined Storage
+            </div>
         </div>
     </section>
 
-    <!-- Magic -->
     <section id="magic">
         <div class="content">
             <h2>Arcane Wonders</h2>
-            <p>Unravel the unknown. Explore unique spell systems and magical artifacts.</p>
-            <p><strong>Mods:</strong> Irons Spells, Mahou Tsukai, Hexerei</p>
+            <p>Magic isn't just about spells; it's about control. Harness ancient powers to shape the world around you.</p>
+            <div class="mod-box">
+                <strong>Featured Magic:</strong><br>
+                Irons Spells 'n Spellbooks, Mahou Tsukai, Hexerei
+            </div>
         </div>
     </section>
 
