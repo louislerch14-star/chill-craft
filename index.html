@@ -10,10 +10,9 @@
         section { 
             min-height: 100vh; display: flex; align-items: center; 
             background-size: cover; background-position: center; background-attachment: fixed;
-            position: relative; padding: 0 10%; /* Mehr Platz für den Inhalt */
+            position: relative; padding: 0 10%; 
         }
 
-        /* Overlay für den Kontrast */
         section::before {
             content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%);
@@ -32,6 +31,7 @@
 
         #welcome { background-image: url('chillcraft.png'); }
         #tech { background-image: url('tech.png'); }
+        #aviation { background-image: url('aviation.png'); } /* Neuer Abschnitt */
         #magic { background-image: url('magic.png'); }
     </style>
 </head>
@@ -40,17 +40,28 @@
     <section id="welcome">
         <div class="content">
             <h1>CHILLCRAFT</h1>
-            <p>Welcome to a world where technical innovation meets cozy atmosphere. Built for creators, engineers, and adventurers.</p>
+            <p>Welcome to a world where technical innovation, aviation, and cozy living meet. Built for creators, pilots, and adventurers.</p>
         </div>
     </section>
 
     <section id="tech">
         <div class="content">
             <h2>Industrial Automation</h2>
-            <p>Don't just build, automate. From massive power grids to automated logistics, we bring depth to your technical journey.</p>
+            <p>Master the machines. From complex production lines to automated logistics, we bring the peak of technical progression to your base.</p>
             <div class="mod-box">
                 <strong>Featured Tech:</strong><br>
-                Create, Create Aeronautics, Mekanism, Refined Storage
+                Create, Mekanism, Refined Storage
+            </div>
+        </div>
+    </section>
+
+    <section id="aviation">
+        <div class="content">
+            <h2>Aviation & Skies</h2>
+            <p>Take to the clouds. Whether you're building airships or piloting realistic aircraft, the sky is no longer the limit in Chillcraft.</p>
+            <div class="mod-box">
+                <strong>Featured Aviation:</strong><br>
+                Civilian Aviation, Create Aeronautics, Immersive Aircraft, Create Radar
             </div>
         </div>
     </section>
@@ -58,7 +69,7 @@
     <section id="magic">
         <div class="content">
             <h2>Arcane Wonders</h2>
-            <p>Magic isn't just about spells; it's about control. Harness ancient powers to shape the world around you.</p>
+            <p>Unravel the unknown. Explore unique spell systems and magical artifacts that add mystery to your journey.</p>
             <div class="mod-box">
                 <strong>Featured Magic:</strong><br>
                 Irons Spells 'n Spellbooks, Mahou Tsukai, Hexerei
